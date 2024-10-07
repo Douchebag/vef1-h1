@@ -22,11 +22,27 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: var(--spacing);
+    height: 490px;
+    background-image: url('../myndir/Background-Header-Image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing);
+    }
   }
   
   .intro img {
     order: 1;
     border-radius: var(--border-radius-image);
+    display: none;
+  }
+
+  //falid i mobile view
+  .intro-text { 
+    display: none;
   }
   
   @media (width >= 500px) {
@@ -69,6 +85,10 @@ main {
     .cards {
       grid-template-columns: repeat(calc(var(--columns)), 1fr);
       grid-template-rows: auto;
+    }
+    // gerir intro text synilegt aftur
+    .intro-text {
+      display: block;
     }
   }
 
