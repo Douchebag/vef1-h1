@@ -21,21 +21,19 @@
 
     <div class="wrapper-content">
       <section class="top-nav">
-        <div>
-          <img src="./myndir//Logotype.png">
-        </div>
-        <div class="wrapper-menu">
-          <input id="menu-toggle" type="checkbox" />
-          <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-          </label>
+        <header class="header">
+          <a href="" class="logo"><img src="./myndir/Logotype.png"></a>
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
           <ul class="menu">
-            <li>Home</li>
-            <li>Recipes</li>
-            <li>Videos</li>
-            <li>About</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">About</a></li>
           </ul>
-        </div>
+        </header>
+
+        
         
       </section>
 
@@ -55,9 +53,10 @@
           </div>
 
           <div class="cards">
+            <p>Get ready to get busy</p>
+            <h1>Check out our latest recipes</h1>
             <div class="content">
-              <p>Get ready to get busy</p>
-              <h1>Check out our latest recipes</h1>
+              
 
               <section class="card">
                 <div class="image"><img src="./myndir/lax-sushi.jpg" alt="Mynd af boxi spilsins Brass: Birmingham"></div>
@@ -194,7 +193,7 @@
   
           <section>
             <label for="email">Enter your example.com email:</label>
-            <input type="email" id="email" pattern="email@example\.com" size="30" required />
+            <input type="email" id="email" placeholder="email@example.com" pattern="+.@example\.com" size="30" required />
           </section>
   
           <section>
