@@ -12,7 +12,7 @@ main {
   main > .content {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 2);
+    gap: calc(var(--vertical-space-large) * 2);
   }
   
   /*** Inngangsefni á forsíðu ***/
@@ -32,6 +32,21 @@ main {
     }
   }
 
+  .nedra-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--vertical-space-large);
+    height: 490px;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing);
+    }
+  }
+
   .intro-background {
     background-image: url('../myndir/Background-Header-Image.png');
     background-repeat: no-repeat;
@@ -41,7 +56,6 @@ main {
   
   .intro img {
     order: 1;
-    border-radius: var(--border-radius-image);
     display: none;
   }
 
