@@ -68,8 +68,8 @@ html {
   --color-background-secondary: var(--color-cream);
   /* Letur stillingar */
   --font-base-size: 1rem;
-  --font-family-base: "Open Sans", arial, helvetica, sans-serif;
-  --font-family-heading: "Matemasie-Regular", "Comic Sans MS", cursive;
+  --font-family-base: "Poppins", arial, helvetica, sans-serif;
+  --font-family-heading: "PlayFair", "Comic Sans MS", cursive;
   /* Transitions */
   --transition-time-short: 300ms;
   --transition-time-long: 600ms;
@@ -443,6 +443,55 @@ main > .content {
   height: 42px;
   border: 1px solid var(--color-brown);
   background-color: transparent;
+  color: var(--color-brown);
+}
+
+/** Letur og stærðir **/
+/*** Grunnstærð er 16px ***/
+html {
+  font-size: var(--font-size-base);
+}
+
+/*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
+@font-face {
+  font-family: "PlayFair";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("woff2");
+}
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/Poppins/Poppins-Regular.ttf") format("woff2");
+}
+/*** Allt meginmál notar open sans ***/
+html,
+input,
+select,
+button {
+  font-family: var(--font-family-base);
+}
+
+/*** Allar fyrirsagnir nota Matemasie regular ***/
+h1,
+h2,
+h3,
+legend {
+  font-family: var(--font-family-heading);
+}
+
+/** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
+img {
+  max-width: 100%;
+}
+
+/** Litur á hlekkjum erfist frá foreldri **/
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
