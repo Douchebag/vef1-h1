@@ -38,12 +38,18 @@ main {
     justify-content: center;
     gap: var(--vertical-space-large);
     height: 490px;
+    align-items: center;
     
     div {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: var(--spacing);
+    }
+
+    img {
+      width: 205px;
+      height: 272px;
     }
   }
 
