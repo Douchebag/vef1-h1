@@ -317,6 +317,17 @@ main > .content {
     display: block;
   }
 }
+.method {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ingredients div div {
+  display: block;
+  border: solid 1px black;
+}
+
 /** Card **/
 .card {
   display: flex;
@@ -494,6 +505,14 @@ a {
   color: inherit;
   text-decoration: none;
   font-size: 14px;
+}
+
+p {
+  color: #5e5b69;
+}
+
+.method p {
+  line-height: 32px;
 }
 
 /*# sourceMappingURL=styles.css.map */

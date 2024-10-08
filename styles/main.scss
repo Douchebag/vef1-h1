@@ -108,3 +108,15 @@ main {
     }
   }
 
+  .method {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ingredients div div{
+    display: block;
+    border: solid 1px black;
+  }
+
+  
