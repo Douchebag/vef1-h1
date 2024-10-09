@@ -12,7 +12,7 @@ main {
   main > .content {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--vertical-space-large) * 2);
+    gap: var(--vertical-space-large);
   }
   
   /*** Inngangsefni á forsíðu ***/
@@ -20,7 +20,6 @@ main {
   .intro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: var(--spacing);
     height: 490px;
     
@@ -29,6 +28,7 @@ main {
       flex-direction: column;
       align-items: center;
       gap: var(--spacing);
+      padding-top: 7rem;
     }
   }
 
@@ -58,6 +58,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 -20px; /* svo thad ignore-ar width offset */
+    background-position-y: -60px;
   }
   
   .intro img {
@@ -75,10 +76,22 @@ main {
     flex-direction: column;
     gap: var(--spacing);
     align-items: center;
+    margin: 0 20px; // utaf bakgrunn
     section p {
       text-align: center;
+      font-weight: 300;
+      font-size: 12px;
     }
+  }
 
+  .hvitt-og-gratt-bg {
+    background: linear-gradient(
+    to bottom,
+    var(--color-white) 0%,
+    var(--color-white) 19.6%,
+    var(--color-grey) 19.6%,
+    var(--color-grey) 100%);
+    margin: 0 -20px; /* svo thad ignore-ar width offset */
   }
   
   @media (width >= 500px) {
