@@ -200,8 +200,10 @@ main {
     gap: 50px;
   }
 
-  .latest > div {
-    gap:var(--spacing)
+  .gapmaker {
+    display: flex;
+    flex-direction: column;
+    gap:calc(2*var(--spacing));
   }
 
   .twoin1 {
@@ -209,3 +211,4 @@ main {
   flex-direction: row;
   gap: 0.4rem;
   }
+  

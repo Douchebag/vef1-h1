@@ -61,6 +61,7 @@ html {
   --color-black: #000;
   --color-brown: #e3cdb1;
   --color-grey-text: #d0d0d0;
+  --color-medium-grey-text:#9B9B9B;
   --color-dark-grey-text: #5E5B69;
   --color-cream: #f7f1eb;
   --color-grey: #fafafa;
@@ -399,8 +400,10 @@ main > .content {
   gap: 50px;
 }
 
-.latest > div {
-  gap: var(--spacing);
+.gapmaker {
+  display: flex;
+  flex-direction: column;
+  gap: calc(2 * var(--spacing));
 }
 
 .twoin1 {
@@ -479,12 +482,7 @@ main > .content {
 .card > .content > .actions {
   display: flex;
   justify-content: space-between;
-  gap: var(--spacing);
   margin-top: var(--spacing);
-}
-
-.latest .cards {
-  margin-top: var(--vertical-space);
 }
 
 /**
@@ -534,12 +532,16 @@ main > .content {
     grid-column: span 12;
   }
 }
-.buttons {
+.bigbuttons {
+  border-radius: 3px;
   width: 191px;
   height: 42px;
+  display: block;
+  background: linear-gradient(to right, var(--color-brown) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
   border: 1px solid var(--color-brown);
-  background-color: transparent;
-  color: var(--color-brown);
 }
 
 .buttons {
@@ -551,11 +553,25 @@ main > .content {
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
+  border: 1px solid var(--color-brown);
 }
 
+.bigbuttons:hover,
 .buttons:hover {
   background-position: left bottom;
   color: white;
+}
+
+.buttonlayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.buttonlayout a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /** Letur og stærðir **/
@@ -614,6 +630,18 @@ a {
 
 .grey-text {
   color: var(--color-grey-text);
+}
+
+.medium-text {
+  color: var(--color-medium-grey-text);
+}
+
+.dark-text {
+  color: var(--color-dark-grey-text);
+}
+
+.smalltext {
+  font-size: 12px;
 }
 
 .split-text {

@@ -59,6 +59,18 @@ a {
   color: var(--color-grey-text);
 }
 
+.medium-text {
+  color: var(--color-medium-grey-text);
+}
+
+.dark-text {
+  color: var(--color-dark-grey-text);
+}
+
+.smalltext {
+  font-size: 12px;
+}
+
 // svo "check out our latest recipes" verdi halft gratt og halft svart
 .split-text {
   display: inline-block;
