@@ -95,10 +95,11 @@ main {
   }
   
   @media (width >= 500px) {
+    .intro-recipie,
     .intro {
       flex-direction: row;
     }
-  
+    .intro-recipie img,
     .intro img {
       max-width: var(--max-width-image);
     }
