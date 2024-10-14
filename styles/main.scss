@@ -32,6 +32,34 @@ main {
     }
   }
 
+  .intro-recipie {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    height: 490px;
+    
+    .a-little-off-the-top{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing);
+      padding-top: 3rem;
+    }
+
+    .a-little-to-the-right {
+      padding-left: 20px;
+    }
+
+    .instructions {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      align-self: flex-start;
+      gap:var(--spacing)
+    }
+  }
+
+  
   .nedra-intro {
     display: flex;
     flex-direction: column;
@@ -61,6 +89,8 @@ main {
     background-position-y: -60px;
   }
   
+
+  .intro-recipie img,
   .intro img {
     order: 1;
     display: none;
@@ -130,6 +160,10 @@ main {
   width: 100%;
 }
 
+.latest .cards {
+  margin-top: var(--vertical-space);
+}
+
 
 @media (min-width: 1000px) {
     .cards {
@@ -148,9 +182,30 @@ main {
     gap: 2rem;
   }
 
-  .ingredients div div{
-    display: block;
-    border: solid 1px black;
+  .ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    div {
+      display:flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 
-  
+
+  .ingredients div div{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .latest > div {
+    gap:var(--spacing)
+  }
+
+  .twoin1 {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  }
