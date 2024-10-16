@@ -201,7 +201,7 @@ html {
 @media (width >= 48em) {
   .header {
     min-height: auto;
-    max-width: var(--max-width);
+    max-width: 100%;
   }
   .header li {
     float: left;
@@ -445,16 +445,6 @@ main > .content {
   margin: 0 -20px; /* svo thad ignore-ar width offset */
 }
 
-@media (width >= 500px) {
-  .intro-recipie,
-  .intro {
-    flex-direction: row;
-  }
-  .intro-recipie img,
-  .intro img {
-    max-width: var(--max-width-image);
-  }
-}
 /** Cards **/
 .cards {
   display: grid;
@@ -539,6 +529,24 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
+@media (width >= 500px) {
+  .intro-recipie,
+  .intro {
+    flex-direction: row;
+  }
+  .intro-recipie img,
+  .intro img {
+    max-width: var(--max-width-image);
+  }
+}
+@media (width >= 800px) {
+  main {
+    padding-top: 2rem;
+  }
+  .intro-background {
+    margin: 0;
+  }
+}
 @media (min-width: 1000px) {
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
@@ -706,10 +714,10 @@ main > .content {
     gap: var(--gutter);
   }
   .wrapper .wrapper-nav {
-    grid-column: span 2;
+    grid-column: span 0;
   }
   .wrapper .wrapper-main {
-    grid-column: span 12;
+    grid-column: span 10;
   }
 }
 .bigbuttons {

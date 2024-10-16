@@ -163,17 +163,6 @@ main {
     margin: 0 -20px; /* svo thad ignore-ar width offset */
   }
   
-  @media (width >= 500px) {
-    .intro-recipie,
-    .intro {
-      flex-direction: row;
-    }
-    .intro-recipie img,
-    .intro img {
-      max-width: var(--max-width-image);
-    }
-  }
-  
  /** Cards **/
 
 .cards {
@@ -263,6 +252,26 @@ main {
 
   .method-gap {
     gap: calc(0.5 * var(--spacing));
+  }
+
+  @media (width >= 500px) {
+    .intro-recipie,
+    .intro {
+      flex-direction: row;
+    }
+    .intro-recipie img,
+    .intro img {
+      max-width: var(--max-width-image);
+    }
+  }
+
+  @media (width >= 800px) {
+    main {
+      padding-top: 2rem;
+    }
+    .intro-background {
+      margin: 0;
+    }
   }
 
   @media (min-width: 1000px) {
