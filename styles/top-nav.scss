@@ -17,12 +17,19 @@
   background-color: #fff;
 }
 
+.header li {
+  max-width: 290px;
+  max-height: 112px;
+  margin-left: 15px;
+}
+
 .header li a {
   display: block;
   padding: 20px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
   text-align: center;
+  font-size: 60px;
 }
 
 .header li a:hover,
@@ -93,7 +100,8 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  height: 510px;
+  max-height: 570px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -123,10 +131,12 @@
 
   .header li {
     float: left;
+    
   }
 
   .header li a {
     padding: 20px 30px;
+    font-size: 20px;
   }
   .header .menu {
     clear: none;
