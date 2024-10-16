@@ -18,10 +18,13 @@
   min-height: 100vh;
   background: linear-gradient(
     to bottom,
-    var(--color-grey) 0%,
+    var(--color-white) 0%,
+    var(--color-white) 20%,
+    var(--color-grey) 20%,
     var(--color-grey) 60%,
     var(--color-white) 60%,
-    var(--color-white) 100%);
+    var(--color-white) 70%,
+    var(--color-grey) 100%);
 }
   
 @media (width >= 800px) {
@@ -47,10 +50,10 @@
   }
   
   .wrapper .wrapper-nav {
-    grid-column: span 2;
+    grid-column: span 0;
   }
   
   .wrapper .wrapper-main {
-    grid-column: span 12;
+    grid-column: span 10;
   }
 }

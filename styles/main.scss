@@ -107,6 +107,7 @@ main {
     img {
       width: 205px;
       height: 272px;
+      box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.1);
     }
     div {
       display: flex;
@@ -159,17 +160,6 @@ main {
     var(--color-white) 76%,
     var(--color-white) 100%);
     margin: 0 -20px; /* svo thad ignore-ar width offset */
-  }
-  
-  @media (width >= 500px) {
-    .intro-recipie,
-    .intro {
-      flex-direction: row;
-    }
-    .intro-recipie img,
-    .intro img {
-      max-width: var(--max-width-image);
-    }
   }
   
  /** Cards **/
@@ -263,15 +253,24 @@ main {
     gap: calc(0.5 * var(--spacing));
   }
 
-  .instructions > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  @media (width >= 500px) {
+    .intro-recipie,
+    .intro {
+      flex-direction: row;
+    }
+    .intro-recipie img,
+    .intro img {
+      max-width: var(--max-width-image);
+    }
   }
 
-  .instructions img {
-    z-index: 1;
-    width: 36px;
+  @media (width >= 800px) {
+    main {
+      padding-top: 2rem;
+    }
+    .intro-background {
+      margin: 0;
+    }
   }
 
   @media (min-width: 1000px) {

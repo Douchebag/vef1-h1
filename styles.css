@@ -96,12 +96,19 @@ html {
   background-color: #fff;
 }
 
+.header li {
+  max-width: 290px;
+  max-height: 112px;
+  margin-left: 15px;
+}
+
 .header li a {
   display: block;
   padding: 20px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
   text-align: center;
+  font-size: 60px;
 }
 
 .header li a:hover,
@@ -169,7 +176,8 @@ html {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  height: 510px;
+  max-height: 570px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -193,13 +201,14 @@ html {
 @media (width >= 48em) {
   .header {
     min-height: auto;
-    max-width: var(--max-width);
+    max-width: 100%;
   }
   .header li {
     float: left;
   }
   .header li a {
     padding: 20px 30px;
+    font-size: 20px;
   }
   .header .menu {
     clear: none;
@@ -226,6 +235,12 @@ footer {
   width: 100%;
 }
 
+.efri-footer input {
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+}
+
 .efri-footer {
   background-color: black;
   color: white;
@@ -233,15 +248,18 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .efri-footer p {
   margin-top: 3rem;
+  color: var(--color-brown);
+  font-size: 12px;
 }
 .efri-footer button {
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: var(--color-brown);
-  box-sizing: content-box;
   padding: 0 2rem;
   margin-top: 2rem;
 }
@@ -256,7 +274,7 @@ footer {
 
 input {
   text-align: left;
-  display: inline-block;
+  display: flex;
   width: 100%;
   background-color: transparent;
   border-bottom-color: var(--color-brown);
@@ -267,7 +285,8 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .efri-footer p {
     text-align: left;
@@ -281,7 +300,7 @@ input {
     margin-top: 0rem;
   }
   .efri-footer h1 {
-    margin-bottom: 0rem;
+    margin-bottom: -2rem;
   }
   .efri-footer p {
     margin-top: 0rem;
@@ -292,6 +311,22 @@ input {
     width: 100%;
   }
 }
+.nedri-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.nedri-footer p {
+  text-align: center;
+}
+.nedri-footer .socials {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 /** Meginmál og efni forsíðu **/
 main {
   width: 100%;
@@ -392,6 +427,7 @@ main > .content {
 .intro-2 img {
   width: 205px;
   height: 272px;
+  box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.1);
 }
 .intro-2 div {
   display: flex;
@@ -434,16 +470,6 @@ main > .content {
   margin: 0 -20px; /* svo thad ignore-ar width offset */
 }
 
-@media (width >= 500px) {
-  .intro-recipie,
-  .intro {
-    flex-direction: row;
-  }
-  .intro-recipie img,
-  .intro img {
-    max-width: var(--max-width-image);
-  }
-}
 /** Cards **/
 .cards {
   display: grid;
@@ -528,6 +554,7 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
+<<<<<<< HEAD
 .instructions > div {
   display: flex;
   flex-direction: row;
@@ -539,6 +566,26 @@ main > .content {
   width: 36px;
 }
 
+=======
+@media (width >= 500px) {
+  .intro-recipie,
+  .intro {
+    flex-direction: row;
+  }
+  .intro-recipie img,
+  .intro img {
+    max-width: var(--max-width-image);
+  }
+}
+@media (width >= 800px) {
+  main {
+    padding-top: 2rem;
+  }
+  .intro-background {
+    margin: 0;
+  }
+}
+>>>>>>> 15b3ae2a67d44bd5457f4a45e1c4e167c62ee4b6
 @media (min-width: 1000px) {
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
@@ -682,7 +729,7 @@ main > .content {
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, var(--color-grey) 0%, var(--color-grey) 60%, var(--color-white) 60%, var(--color-white) 100%);
+  background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 20%, var(--color-grey) 20%, var(--color-grey) 60%, var(--color-white) 60%, var(--color-white) 70%, var(--color-grey) 100%);
 }
 
 @media (width >= 800px) {
@@ -706,10 +753,10 @@ main > .content {
     gap: var(--gutter);
   }
   .wrapper .wrapper-nav {
-    grid-column: span 2;
+    grid-column: span 0;
   }
   .wrapper .wrapper-main {
-    grid-column: span 12;
+    grid-column: span 10;
   }
 }
 .bigbuttons {
@@ -734,6 +781,7 @@ main > .content {
   background-position: right bottom;
   transition: all 0.5s ease-out;
   border: 1px solid var(--color-brown);
+  color: var(--color-brown);
 }
 
 .bigbuttons:hover,
