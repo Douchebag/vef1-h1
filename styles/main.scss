@@ -94,8 +94,7 @@ main {
   }
   
 
-  .intro-recipie img,
-  .intro-1 img {
+  .hidden-pie {
     order: 1;
     display: none;
   }
@@ -262,6 +261,17 @@ main {
 
   .method-gap {
     gap: calc(0.5 * var(--spacing));
+  }
+
+  .instructions > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .instructions img {
+    z-index: 1;
+    width: 36px;
   }
 
   @media (min-width: 1000px) {

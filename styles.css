@@ -286,6 +286,11 @@ input {
   .efri-footer p {
     margin-top: 0rem;
   }
+  .efri-footer label {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
 }
 /** Meginmál og efni forsíðu **/
 main {
@@ -373,8 +378,7 @@ main > .content {
   background-position-y: -60px;
 }
 
-.intro-recipie img,
-.intro-1 img {
+.hidden-pie {
   order: 1;
   display: none;
 }
@@ -522,6 +526,17 @@ main > .content {
 
 .method-gap {
   gap: calc(0.5 * var(--spacing));
+}
+
+.instructions > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.instructions img {
+  z-index: 1;
+  width: 36px;
 }
 
 @media (min-width: 1000px) {
