@@ -16,7 +16,12 @@
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-background-primary);
+  background: linear-gradient(
+    to bottom,
+    var(--color-grey) 0%,
+    var(--color-grey) 60%,
+    var(--color-white) 60%,
+    var(--color-white) 100%);
 }
   
 @media (width >= 800px) {

@@ -222,6 +222,71 @@ html {
   background-image: url("../myndir/Youtube-Icon.png");
 }
 
+footer {
+  width: 100%;
+}
+
+.efri-footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.efri-footer p {
+  margin-top: 3rem;
+}
+.efri-footer button {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--color-brown);
+  box-sizing: content-box;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+.efri-footer h1 {
+  padding-bottom: 2rem;
+}
+.efri-footer label {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+input {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  background-color: transparent;
+  border-bottom-color: var(--color-brown);
+}
+
+@media (min-width: 1000px) {
+  .efri-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3rem;
+  }
+  .efri-footer p {
+    text-align: left;
+  }
+  .efri-footer button {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: var(--color-brown);
+    box-sizing: content-box;
+    padding: 0 2rem;
+    margin-top: 0rem;
+  }
+  .efri-footer h1 {
+    margin-bottom: 0rem;
+  }
+  .efri-footer p {
+    margin-top: 0rem;
+  }
+}
 /** Meginmál og efni forsíðu **/
 main {
   width: 100%;
@@ -250,6 +315,9 @@ main > .content {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing);
+}
+
+.intro-1 div {
   padding-top: 7rem;
 }
 
@@ -306,9 +374,30 @@ main > .content {
 }
 
 .intro-recipie img,
-.intro img {
+.intro-1 img {
   order: 1;
   display: none;
+}
+
+.intro-2 {
+  display: flex;
+  align-items: center;
+  gap: var(--vertical-space-large);
+  margin-top: 4rem;
+}
+.intro-2 img {
+  width: 205px;
+  height: 272px;
+}
+.intro-2 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing);
+  text-align: center;
+}
+.intro-2 p {
+  color: var(--color-dark-grey-text);
 }
 
 .intro-text {
@@ -327,9 +416,17 @@ main > .content {
   font-weight: 300;
   font-size: 12px;
 }
+.texti-og-cards button {
+  margin-top: 2rem;
+}
 
 .hvitt-og-gratt-bg {
   background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 19.6%, var(--color-grey) 19.6%, var(--color-grey) 100%);
+  margin: 0 -20px; /* svo thad ignore-ar width offset */
+}
+
+.hvitt-og-brunn-bg {
+  background: linear-gradient(to bottom, var(--color-cream) 0%, var(--color-cream) 76%, var(--color-white) 76%, var(--color-white) 100%);
   margin: 0 -20px; /* svo thad ignore-ar width offset */
 }
 
@@ -350,6 +447,14 @@ main > .content {
   gap: var(--vertical-space);
   justify-items: center;
   width: 100%;
+}
+
+.cards-1 > *:nth-last-child(-n+3) {
+  display: none;
+}
+
+.cards-2 > *:nth-last-child(1) {
+  display: none;
 }
 
 .cards > .title {
@@ -562,7 +667,7 @@ main > .content {
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-background-primary);
+  background: linear-gradient(to bottom, var(--color-grey) 0%, var(--color-grey) 60%, var(--color-white) 60%, var(--color-white) 100%);
 }
 
 @media (width >= 800px) {
@@ -606,8 +711,8 @@ main > .content {
 
 .buttons {
   border-radius: 3px;
-  width: 100px;
-  height: 30px;
+  width: 191px;
+  height: 42px;
   display: block;
   background: linear-gradient(to right, var(--color-brown) 50%, transparent 50%);
   background-size: 200% 100%;

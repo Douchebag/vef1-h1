@@ -9,3 +9,82 @@
 .yt {
   background-image: url('../myndir/Youtube-Icon.png');
 }
+
+footer {
+  width: 100%;
+}
+.efri-footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+text-align: center;
+
+p {
+  margin-top: 3rem;
+}
+  button {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--color-brown);
+    box-sizing: content-box;
+    padding: 0 2rem;
+    margin-top: 2rem;
+
+  }
+  
+  h1 {
+    padding-bottom: 2rem;
+  }
+  label {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    }
+}
+input{
+  text-align: left;
+display: inline-block;
+width: 100%;
+background-color: transparent;
+border-bottom-color: var(--color-brown);
+
+  
+  
+}
+
+
+@media (min-width: 1000px) {
+.efri-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3rem;
+
+
+p {
+  text-align: left;
+}
+button {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: var(--color-brown);
+  box-sizing: content-box;
+  padding: 0 2rem;
+  margin-top: 0rem;
+
+}
+h1 {
+  margin-bottom: 0rem;
+}
+p {
+  margin-top: 0rem;
+}
+label {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  }
+}
+}
