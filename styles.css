@@ -307,7 +307,6 @@ input {
   }
   .efri-footer label {
     text-align: left;
-    display: inline-block;
     width: 100%;
   }
 }
