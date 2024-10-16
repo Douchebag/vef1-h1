@@ -37,7 +37,11 @@ p {
   h1 {
     padding-bottom: 2rem;
   }
-
+  label {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    }
 }
 input{
   text-align: left;
@@ -49,11 +53,7 @@ border-bottom-color: var(--color-brown);
   
   
 }
-label {
-text-align: left;
-display: inline-block;
-width: 100%;
-}
+
 
 @media (min-width: 1000px) {
 .efri-footer {
@@ -81,5 +81,10 @@ h1 {
 p {
   margin-top: 0rem;
 }
+label {
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  }
 }
 }
