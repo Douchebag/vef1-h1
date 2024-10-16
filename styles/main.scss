@@ -94,8 +94,7 @@ main {
   }
   
 
-  .intro-recipie img,
-  .intro-1 img {
+  .hidden-pie {
     order: 1;
     display: none;
   }
@@ -161,17 +160,6 @@ main {
     var(--color-white) 76%,
     var(--color-white) 100%);
     margin: 0 -20px; /* svo thad ignore-ar width offset */
-  }
-  
-  @media (width >= 500px) {
-    .intro-recipie,
-    .intro {
-      flex-direction: row;
-    }
-    .intro-recipie img,
-    .intro img {
-      max-width: var(--max-width-image);
-    }
   }
   
  /** Cards **/
@@ -263,6 +251,26 @@ main {
 
   .method-gap {
     gap: calc(0.5 * var(--spacing));
+  }
+
+  @media (width >= 500px) {
+    .intro-recipie,
+    .intro {
+      flex-direction: row;
+    }
+    .intro-recipie img,
+    .intro img {
+      max-width: var(--max-width-image);
+    }
+  }
+
+  @media (width >= 800px) {
+    main {
+      padding-top: 2rem;
+    }
+    .intro-background {
+      margin: 0;
+    }
   }
 
   @media (min-width: 1000px) {
