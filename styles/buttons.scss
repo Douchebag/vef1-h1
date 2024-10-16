@@ -41,3 +41,9 @@
     align-items: center;
   }
 }
+
+@media (width >= 800px) {
+  .buttons {
+    width: 250px;
+  }
+}

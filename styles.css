@@ -553,27 +553,10 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
-<<<<<<< HEAD
-.instructions > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.instructions img {
-  z-index: 1;
-  width: 36px;
-}
-
-=======
 @media (width >= 500px) {
   .intro-recipie,
   .intro {
     flex-direction: row;
-  }
-  .intro-recipie img,
-  .intro img {
-    max-width: var(--max-width-image);
   }
 }
 @media (width >= 800px) {
@@ -582,9 +565,40 @@ main > .content {
   }
   .intro-background {
     margin: 0;
+    background: var(--color-grey);
+  }
+  .intro {
+    position: relative;
+    overflow: hidden;
+    height: 768px;
+  }
+  .intro div {
+    width: 50%;
+    display: flex;
+    align-items: baseline;
+    max-width: 552px;
+  }
+  .intro div h1 {
+    font-size: 60px;
+  }
+  .intro div p {
+    font-size: 18px;
+    color: var(--color-dark-grey-text);
+  }
+  .intro-text {
+    display: block;
+  }
+  .hidden-pie {
+    display: block;
+    position: absolute;
+    bottom: -485px;
+    right: -220px;
+    z-index: 1;
+    width: 890px;
+    height: 1336px;
+    max-width: 890px;
   }
 }
->>>>>>> 15b3ae2a67d44bd5457f4a45e1c4e167c62ee4b6
 @media (min-width: 1000px) {
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
@@ -755,7 +769,7 @@ main > .content {
     grid-column: span 0;
   }
   .wrapper .wrapper-main {
-    grid-column: span 10;
+    grid-column: span 12;
   }
 }
 .bigbuttons {
@@ -801,6 +815,11 @@ main > .content {
   align-items: center;
 }
 
+@media (width >= 800px) {
+  .buttons {
+    width: 250px;
+  }
+}
 /** Letur og stærðir **/
 /*** Grunnstærð er 16px ***/
 html {
