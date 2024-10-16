@@ -52,15 +52,16 @@ main {
     .a-little-to-the-right {
       padding-left: 20px;
     }
-
-    .instructions {
-      display: flex;
-      flex-direction: column;
-      padding-left: 20px;
-      align-self: flex-start;
-      gap:var(--spacing)
-    }
   }
+
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    align-self: flex-start;
+    gap:var(--spacing)
+  }
+  
 
   
   .nedra-intro {
@@ -211,16 +212,7 @@ main {
 }
 
 
-@media (min-width: 1000px) {
-    .cards {
-      grid-template-columns: repeat(calc(var(--columns)), 1fr);
-      grid-template-rows: auto;
-    }
-    // gerir intro text synilegt aftur
-    .intro-text {
-      display: block;
-    }
-  }
+
 
   .method {
     display: flex;
@@ -244,6 +236,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    align-items: flex-end;
   }
 
   .gapmaker {
@@ -257,4 +250,83 @@ main {
   flex-direction: row;
   gap: 0.4rem;
   }
-  
+
+  .appearlater {
+    display: none;
+  }
+
+  .changerow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--vertical-space-large)
+  }
+
+  .method-gap {
+    gap: calc(0.5 * var(--spacing));
+  }
+
+  @media (min-width: 1000px) {
+    .cards {
+      grid-template-columns: repeat(calc(var(--columns)), 1fr);
+      grid-template-rows: auto;
+    }
+    // gerir intro text synilegt aftur
+    
+    .intro-text {
+      display: block;
+    }
+
+    .intro-background {
+      margin: 0;
+    }
+
+    .instructions {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0px;
+    }
+    .intro-recipie .a-little-off-the-top {
+      margin-left: 135px;
+      align-items: start;
+      margin-top: 120px;
+    
+    }
+    
+    .a-little-to-the-right {
+      display: none;
+      
+    }
+
+    .appearlater {
+      display: flex;
+      max-width: 550px;
+    }
+
+    .changerow {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .method {
+      max-width: 55vw;
+    }
+
+    .changerow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-right: 50px;
+      margin-left: 135px;
+      gap: 120px;
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    .ingredients {
+      min-width: 250px;
+    }
+    .method-gap {
+      flex-direction: column;
+    }
+  }
