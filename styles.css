@@ -807,12 +807,17 @@ main > .content {
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
+}
+
+.forsidu-wrapper {
   background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 20%, var(--color-grey) 20%, var(--color-grey) 60%, var(--color-white) 60%, var(--color-white) 70%, var(--color-grey) 100%);
 }
 
 @media (width >= 800px) {
   .wrapper {
     gap: var(--vertical-space-large);
+  }
+  .forsidu-wrapper {
     background: linear-gradient(to bottom, var(--color-grey) 0%, var(--color-grey) 22.5%, var(--color-white) 22.5%, var(--color-white) 30.5%, var(--color-grey) 30.5%, var(--color-grey) 51%, var(--color-brown) 51%, var(--color-brown) 69%, var(--color-white) 69%, var(--color-white) 81%, var(--color-grey) 81%, var(--color-grey) 100%);
   }
 }

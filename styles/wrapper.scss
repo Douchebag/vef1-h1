@@ -16,6 +16,10 @@
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
+  
+}
+
+.forsidu-wrapper {
   background: linear-gradient(
     to bottom,
     var(--color-white) 0%,
@@ -30,6 +34,9 @@
 @media (width >= 800px) {
   .wrapper {
     gap: var(--vertical-space-large);
+    
+  }
+  .forsidu-wrapper {
     background: linear-gradient(
     to bottom,
     var(--color-grey) 0%,
