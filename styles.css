@@ -201,7 +201,8 @@ html {
 @media (width >= 48em) {
   .header {
     min-height: auto;
-    max-width: 100%;
+    max-width: var(--max-width);
+    left: auto;
   }
   .header li {
     float: left;
@@ -439,6 +440,9 @@ main > .content {
 .intro-2 p {
   color: var(--color-dark-grey-text);
 }
+.intro-2 .desktop-text {
+  display: none;
+}
 
 .intro-text {
   display: none;
@@ -555,8 +559,7 @@ main > .content {
 }
 
 @media (width >= 500px) {
-  .intro-recipie,
-  .intro {
+  .intro-recipie {
     flex-direction: row;
   }
 }
@@ -589,6 +592,36 @@ main > .content {
   .intro-text {
     display: block;
   }
+  .intro-2 {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--gutter);
+  }
+  .intro-2 .mobile-text {
+    display: none;
+  }
+  .intro-2 .desktop-text {
+    display: block;
+  }
+  .intro-2 img {
+    max-width: 471px;
+    max-height: 626px;
+    width: 100%;
+    height: 100%;
+    grid-column-end: 12;
+    grid-column-start: 7;
+  }
+  .intro-2 div {
+    grid-column-end: 7;
+    grid-column-start: 2;
+    width: 100%;
+  }
+  .intro-2 div > *:nth-last-child(2) {
+    text-align: left;
+  }
+  .intro-2 div h1 {
+    text-wrap: nowrap;
+  }
   .hidden-pie {
     display: block;
     position: absolute;
@@ -599,11 +632,26 @@ main > .content {
     height: 1336px;
     max-width: 890px;
   }
+  .hvitt-og-brunn-bg {
+    margin: 0;
+  }
 }
 @media (min-width: 1000px) {
+  .texti-og-cards section {
+    width: 100%;
+  }
+  .texti-og-cards section p, .texti-og-cards section h3 {
+    text-align: left;
+  }
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
     grid-template-rows: auto;
+  }
+  .cards-1 > *:nth-last-child(-n+3) {
+    display: flex;
+  }
+  .cards-2 > *:nth-last-child(1) {
+    display: flex;
   }
   .intro-text {
     display: block;
@@ -872,7 +920,7 @@ a {
 }
 
 .brown-text {
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
 }
 
 .grey-text {
@@ -915,8 +963,6 @@ a {
 
 .card p {
   color: var(--color-grey-text);
-  font-weight: 300;
-  font-size: 12px;
 }
 
 /*# sourceMappingURL=styles.css.map */

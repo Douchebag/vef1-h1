@@ -62,8 +62,6 @@ main {
     gap:var(--spacing)
   }
   
-
-  
   .nedra-intro {
     display: flex;
     flex-direction: column;
@@ -119,6 +117,9 @@ main {
     p {
       color: var(--color-dark-grey-text);
     }
+    .desktop-text {
+      display: none;
+    }
   }
 
   //falid i mobile view
@@ -169,7 +170,6 @@ main {
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: center;
-
   width: 100%;
 }
 
@@ -191,7 +191,6 @@ main {
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: center;
-
   width: 100%;
 }
 
@@ -254,8 +253,7 @@ main {
   }
 
   @media (width >= 500px) {
-    .intro-recipie,
-    .intro {
+    .intro-recipie {
       flex-direction: row;
     }
     .intro-recipie img,
@@ -294,6 +292,38 @@ main {
     .intro-text {
       display: block;
     }
+    .intro-2 {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      gap: var(--gutter);
+      .mobile-text {
+        display: none;
+      }
+      .desktop-text {
+        display: block;
+      }
+      img {
+        max-width: 471px;
+        max-height: 626px;
+        width: 100%;
+        height: 100%;
+        //grid-column: span 5;
+        grid-column-end: 12;
+        grid-column-start: 7;
+      }
+      div {
+        //grid-column: span 5;
+        grid-column-end: 7;
+        grid-column-start: 2;
+        width: 100%;
+      }
+      div > *:nth-last-child(2) {
+        text-align: left;
+      }
+      div h1 {
+        text-wrap: nowrap;
+      }
+    }
     .hidden-pie {
       display: block;
       position: absolute;
@@ -304,12 +334,30 @@ main {
       height: 1336px;
       max-width: 890px;
     }
+    .hvitt-og-brunn-bg {
+      margin: 0;
+    }
   }
 
   @media (min-width: 1000px) {
+    .texti-og-cards section {
+      width: 100%;
+      p, h3 {
+        text-align: left;
+      }
+    }
+
     .cards {
       grid-template-columns: repeat(calc(var(--columns)), 1fr);
       grid-template-rows: auto;
+    }
+
+    .cards-1 > *:nth-last-child(-n+3) {
+      display: flex;
+    }
+    
+    .cards-2 > *:nth-last-child(1) {
+      display: flex;
     }
 
     // gerir intro text synilegt aftur

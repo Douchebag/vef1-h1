@@ -126,7 +126,8 @@
 @media (width >= 48em) {
   .header {
     min-height: auto;
-    max-width: 100%;
+    max-width: var(--max-width);
+    left: auto;
   }
 
   .header li {
