@@ -280,6 +280,7 @@ main {
       display: flex;
       align-items: baseline;
       max-width: 552px;
+      padding-left: 2px;
       h1 {
         font-size: 60px;
       }
@@ -336,6 +337,10 @@ main {
     }
     .hvitt-og-brunn-bg {
       margin: 0;
+      background: transparent;
+    }
+    .hvitt-og-gratt-bg {
+      background: transparent;
     }
   }
 

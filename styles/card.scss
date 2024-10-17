@@ -8,13 +8,6 @@
   width: 100%;
 }
 
-@media (width >= 1000px) {
-  .card {
-    grid-column: span 4;
-    justify-content: center;
-  }
-}
-
 .card > .image {
   width: 100%;
 }
@@ -75,4 +68,21 @@
   display: flex;
   justify-content: space-between;
   margin-top: var(--spacing);
+}
+
+@media (width >= 800px) {
+  .card > .content {
+    max-height: 93px;
+  }
+}
+
+@media (width >= 1000px) {
+  .card {
+    grid-column: span 4;
+    justify-content: center;
+    height: 383px;
+  }
+  .card > .image img, .card .image {
+    height: 290px;
+  }
 }

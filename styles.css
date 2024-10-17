@@ -65,6 +65,7 @@ html {
   --color-dark-grey-text: #5E5B69;
   --color-cream: #f7f1eb;
   --color-grey: #fafafa;
+  --color-light-grey: #E7E7E7;
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
   --color-background-secondary: var(--color-cream);
@@ -81,7 +82,6 @@ html {
 /* header */
 .header {
   background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -197,12 +197,12 @@ html {
   top: 0;
 }
 
-/* 48em = 768px */
-@media (width >= 48em) {
+@media (width >= 800px) {
   .header {
     min-height: auto;
     max-width: var(--max-width);
     left: auto;
+    background: var(--color-grey);
   }
   .header li {
     float: left;
@@ -210,11 +210,13 @@ html {
   .header li a {
     padding: 20px 30px;
     font-size: 20px;
+    border: none;
   }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
+    background: var(--color-grey);
   }
   .header .menu-icon {
     display: none;
@@ -581,6 +583,7 @@ main > .content {
     display: flex;
     align-items: baseline;
     max-width: 552px;
+    padding-left: 2px;
   }
   .intro div h1 {
     font-size: 60px;
@@ -634,6 +637,10 @@ main > .content {
   }
   .hvitt-og-brunn-bg {
     margin: 0;
+    background: transparent;
+  }
+  .hvitt-og-gratt-bg {
+    background: transparent;
   }
 }
 @media (min-width: 1000px) {
@@ -710,12 +717,6 @@ main > .content {
   width: 100%;
 }
 
-@media (width >= 1000px) {
-  .card {
-    grid-column: span 4;
-    justify-content: center;
-  }
-}
 .card > .image {
   width: 100%;
 }
@@ -774,6 +775,21 @@ main > .content {
   margin-top: var(--spacing);
 }
 
+@media (width >= 800px) {
+  .card > .content {
+    max-height: 93px;
+  }
+}
+@media (width >= 1000px) {
+  .card {
+    grid-column: span 4;
+    justify-content: center;
+    height: 383px;
+  }
+  .card > .image img, .card .image {
+    height: 290px;
+  }
+}
 /**
 * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
 * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
@@ -797,6 +813,7 @@ main > .content {
 @media (width >= 800px) {
   .wrapper {
     gap: var(--vertical-space-large);
+    background: linear-gradient(to bottom, var(--color-grey) 0%, var(--color-grey) 22.5%, var(--color-white) 22.5%, var(--color-white) 30.5%, var(--color-grey) 30.5%, var(--color-grey) 51%, var(--color-brown) 51%, var(--color-brown) 69%, var(--color-white) 69%, var(--color-white) 81%, var(--color-grey) 81%, var(--color-grey) 100%);
   }
 }
 .wrapper .wrapper-content {
@@ -822,7 +839,6 @@ main > .content {
   }
 }
 .bigbuttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -834,7 +850,6 @@ main > .content {
 }
 
 .buttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -867,6 +882,27 @@ main > .content {
 @media (width >= 800px) {
   .buttons {
     width: 250px;
+  }
+  .button-border {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .button-border:before,
+  .button-border:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--color-light-grey);
+    top: 70%;
+    width: calc(50% - 205px);
+  }
+  .button-border:before {
+    left: 0;
+  }
+  .button-border:after {
+    right: 0;
   }
 }
 /** Letur og stærðir **/

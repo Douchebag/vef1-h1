@@ -1,5 +1,4 @@
 .bigbuttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -11,7 +10,6 @@
 } 
 
 .buttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -45,5 +43,29 @@
 @media (width >= 800px) {
   .buttons {
     width: 250px;
+  }
+  .button-border {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .button-border:before,
+  .button-border:after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid var(--color-light-grey);
+    top: 70%;
+    width: calc(50% - 205px);
+  }
+  
+  .button-border:before {
+    left: 0;
+  }
+  
+  .button-border:after {
+    right: 0;
   }
 }
