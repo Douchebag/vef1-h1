@@ -252,6 +252,63 @@ main {
     gap: calc(0.5 * var(--spacing));
   }
 
+  .intro-3 {
+    height: auto;
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .checkmark {
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      border: 2px solid black;
+      border-radius: 2px;
+      height: 18px;
+      width: 18px;
+      background-color: transparent;
+    }
+    
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      border: 1px solid black;
+    }
+    
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .container .checkmark:after {
+      left: 3px;
+      top: -2px;
+      width: 8px;
+      height: 16px;
+      border: 1px solid black;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
   @media (width >= 500px) {
     .intro-recipie {
       flex-direction: row;
@@ -341,59 +398,6 @@ main {
         align-items: end;
         padding-right: 4px;
         padding-top: 5rem;
-      }
-      .container {
-        display: block;
-        position: relative;
-        padding-left: 35px;
-        margin-bottom: 12px;
-        cursor: pointer;
-        font-size: 22px;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      .checkmark {
-        position: absolute;
-        top: 8px;
-        left: 3px;
-        border: 2px solid black;
-        border-radius: 2px;
-        height: 18px;
-        width: 18px;
-        background-color: transparent;
-      }
-      
-      .container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-        height: 0;
-        width: 0;
-        border: 1px solid black;
-      }
-      
-      .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
-
-      .container input:checked ~ .checkmark:after {
-        display: block;
-      }
-
-      .container .checkmark:after {
-        left: 3px;
-        top: -2px;
-        width: 8px;
-        height: 16px;
-        border: 1px solid black;
-        border-width: 0 3px 3px 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
       }
     }
     .hidden-pie {

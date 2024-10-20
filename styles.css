@@ -560,6 +560,59 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
+.intro-3 {
+  height: auto;
+}
+.intro-3 .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.intro-3 .checkmark {
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+}
+.intro-3 .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 1px solid black;
+}
+.intro-3 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.intro-3 .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.intro-3 .container .checkmark:after {
+  left: 3px;
+  top: -2px;
+  width: 8px;
+  height: 16px;
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 @media (width >= 500px) {
   .intro-recipie {
     flex-direction: row;
@@ -642,55 +695,6 @@ main > .content {
     align-items: end;
     padding-right: 4px;
     padding-top: 5rem;
-  }
-  .intro-3 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  .intro-3 .checkmark {
-    position: absolute;
-    top: 8px;
-    left: 3px;
-    border: 2px solid black;
-    border-radius: 2px;
-    height: 18px;
-    width: 18px;
-    background-color: transparent;
-  }
-  .intro-3 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    border: 1px solid black;
-  }
-  .intro-3 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  .intro-3 .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-  .intro-3 .container .checkmark:after {
-    left: 3px;
-    top: -2px;
-    width: 8px;
-    height: 16px;
-    border: 1px solid black;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
   }
   .hidden-pie {
     display: block;
