@@ -682,10 +682,10 @@ main > .content {
     display: block;
   }
   .intro-3 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
+    left: 3px;
+    top: -2px;
+    width: 8px;
+    height: 16px;
     border: 1px solid black;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
