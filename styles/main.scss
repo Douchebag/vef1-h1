@@ -325,6 +325,77 @@ main {
         text-wrap: nowrap;
       }
     }
+    .intro-3 {
+      height: 114px;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 60px;
+      }
+      .haegri {
+        align-items: end;
+        padding-right: 4px;
+        padding-top: 5rem;
+      }
+      .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .checkmark {
+        position: absolute;
+        top: 8px;
+        left: 3px;
+        border: 2px solid black;
+        border-radius: 2px;
+        height: 18px;
+        width: 18px;
+        background-color: transparent;
+      }
+      
+      .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        border: 1px solid black;
+      }
+      
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: 1px solid black;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
     .hidden-pie {
       display: block;
       position: absolute;
