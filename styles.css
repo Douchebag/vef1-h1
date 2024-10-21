@@ -307,7 +307,6 @@ input {
   }
   .efri-footer label {
     text-align: left;
-    display: inline-block;
     width: 100%;
   }
 }
@@ -411,6 +410,17 @@ main > .content {
   background-size: cover;
   margin: 0 -20px; /* svo thad ignore-ar width offset */
   background-position-y: -60px;
+}
+
+.background-video {
+  background-image: url("../myndir/pink-backg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 -20px; /* svo thad ignore-ar width offset */
+  background-position-y: -60px;
+  width: 100vh;
+  display: flex;
+  align-items: end;
 }
 
 .hidden-pie {
@@ -554,19 +564,10 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
-<<<<<<< HEAD
-.instructions > div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.grad {
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
 }
 
-.instructions img {
-  z-index: 1;
-  width: 36px;
-}
-
-=======
 @media (width >= 500px) {
   .intro-recipie,
   .intro {
@@ -581,11 +582,19 @@ main > .content {
   main {
     padding-top: 2rem;
   }
+  .backround-video,
   .intro-background {
     margin: 0;
   }
 }
->>>>>>> 15b3ae2a67d44bd5457f4a45e1c4e167c62ee4b6
+.instructions div {
+  display: flex;
+  flex-direction: row;
+}
+.instructions div img {
+  width: 30px;
+}
+
 @media (min-width: 1000px) {
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
@@ -594,6 +603,7 @@ main > .content {
   .intro-text {
     display: block;
   }
+  .backround-video,
   .intro-background {
     margin: 0;
   }
