@@ -696,7 +696,7 @@ main > .content {
     padding-right: 4px;
     padding-top: 5rem;
   }
-  .hidden-pie {
+  .intro-1 > .hidden-pie {
     display: block;
     position: absolute;
     bottom: -485px;
@@ -705,6 +705,21 @@ main > .content {
     width: 890px;
     height: 1336px;
     max-width: 890px;
+  }
+  .intro-recipie > .hidden-pie {
+    display: block;
+    position: absolute;
+    bottom: -485px;
+    right: -220px;
+    z-index: 1;
+    width: 890px;
+    height: 1336px;
+    max-width: 890px;
+  }
+  .intro-recipie {
+    height: 768px;
+    overflow: hidden;
+    position: relative;
   }
   .hvitt-og-brunn-bg {
     margin: 0;
@@ -746,6 +761,7 @@ main > .content {
     margin-left: 135px;
     align-items: start;
     margin-top: 120px;
+    z-index: 2;
   }
   .a-little-to-the-right {
     display: none;
