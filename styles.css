@@ -457,11 +457,6 @@ main > .content {
   align-items: center;
   margin: 0 20px;
 }
-.texti-og-cards section p {
-  text-align: center;
-  font-weight: 300;
-  font-size: 12px;
-}
 .texti-og-cards button {
   margin-top: 2rem;
 }
@@ -796,6 +791,12 @@ main > .content {
   }
 }
 /** Card **/
+.card p {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
+}
+
 .card {
   display: flex;
   flex-direction: column;
