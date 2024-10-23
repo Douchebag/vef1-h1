@@ -617,7 +617,6 @@ main > .content {
   main {
     padding-top: 2rem;
   }
-  
   .intro-background {
     margin: 0;
     background: var(--color-grey);
@@ -745,7 +744,6 @@ main > .content {
   .intro-text {
     display: block;
   }
-  
   .intro-background {
     margin: 0;
   }
