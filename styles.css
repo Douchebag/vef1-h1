@@ -588,6 +588,8 @@ main > .content {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  background: transparent;
+  border: none;
 }
 .imagine img {
   max-height: 200px;
