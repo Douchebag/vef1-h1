@@ -247,6 +247,7 @@ main {
     display: flex;
     flex-direction: column;
     gap:calc(2*var(--spacing));
+    align-items: center;
   }
 
   .twoin1 {

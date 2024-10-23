@@ -60,7 +60,7 @@ html {
   --color-white: #fff;
   --color-black: #000;
   --color-brown: #e3cdb1;
-  --color-grey: #d0d0d0;
+  --color-grey-text: #d0d0d0;
   --color-medium-grey:#9B9B9B;
   --color-dark-grey: #5E5B69;
   --color-cream: #f7f1eb;
@@ -555,6 +555,7 @@ main > .content {
   display: flex;
   flex-direction: column;
   gap: calc(2 * var(--spacing));
+  align-items: center;
 }
 
 .twoin1 {
@@ -1093,7 +1094,7 @@ a {
 }
 
 .grey-text {
-  color: var(--color-grey);
+  color: var(--color-grey-text);
 }
 
 .medium-text {
