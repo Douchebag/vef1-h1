@@ -56,15 +56,19 @@ a {
 }
 
 .grey-text {
-  color: var(--color-grey-text);
+  color: var(--color-grey);
 }
 
 .medium-text {
-  color: var(--color-medium-grey-text);
+  color: var(--color-medium-grey);
 }
 
 .dark-text {
-  color: var(--color-dark-grey-text);
+  color: var(--color-dark-grey);
+}
+
+.white-text {
+  color: var(--color-white)
 }
 
 .smalltext {

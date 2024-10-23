@@ -60,9 +60,9 @@ html {
   --color-white: #fff;
   --color-black: #000;
   --color-brown: #e3cdb1;
-  --color-grey-text: #d0d0d0;
-  --color-medium-grey-text:#9B9B9B;
-  --color-dark-grey-text: #5E5B69;
+  --color-grey: #d0d0d0;
+  --color-medium-grey:#9B9B9B;
+  --color-dark-grey: #5E5B69;
   --color-cream: #f7f1eb;
   --color-grey: #fafafa;
   --color-light-grey: #E7E7E7;
@@ -426,6 +426,18 @@ main > .content {
   background-position-y: -60px;
 }
 
+.intro-background:has(.intro-video) {
+  background-image: url(../myndir/pink-backg.png);
+  background-size: auto;
+}
+
+.intro-video {
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+  height: 450px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .hidden-pie {
   order: 1;
   display: none;
@@ -466,11 +478,6 @@ main > .content {
   gap: var(--spacing);
   align-items: center;
   margin: 0 20px;
-}
-.texti-og-cards section p {
-  text-align: center;
-  font-weight: 300;
-  font-size: 12px;
 }
 .texti-og-cards button {
   margin-top: 2rem;
@@ -568,6 +575,21 @@ main > .content {
 
 .method-gap {
   gap: calc(0.5 * var(--spacing));
+}
+
+.overlapper {
+  white-space: nowrap;
+  padding-left: 20px;
+}
+
+.imagine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.imagine img {
+  max-height: 200px;
 }
 
 .intro-3 {
@@ -706,7 +728,7 @@ main > .content {
     padding-right: 4px;
     padding-top: 5rem;
   }
-  .hidden-pie {
+  .intro-1 > .hidden-pie {
     display: block;
     position: absolute;
     bottom: -485px;
@@ -715,6 +737,24 @@ main > .content {
     width: 890px;
     height: 1336px;
     max-width: 890px;
+  }
+  .intro-recipie > .hidden-pie {
+    display: block;
+    position: absolute;
+    bottom: -485px;
+    right: -220px;
+    z-index: 1;
+    width: 890px;
+    height: 1336px;
+    max-width: 890px;
+  }
+  .intro-recipie {
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+  }
+  .intro-video {
+    height: 450px;
   }
   .hvitt-og-brunn-bg {
     margin: 0;
@@ -756,9 +796,7 @@ main > .content {
     margin-left: 135px;
     align-items: start;
     margin-top: 120px;
-  }
-  .a-little-off-the-top > h1 {
-    font-size: 60px;
+    z-index: 2;
   }
   .a-little-to-the-right {
     display: none;
@@ -793,6 +831,12 @@ main > .content {
   }
 }
 /** Card **/
+.card p {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -1049,15 +1093,19 @@ a {
 }
 
 .grey-text {
-  color: var(--color-grey-text);
+  color: var(--color-grey);
 }
 
 .medium-text {
-  color: var(--color-medium-grey-text);
+  color: var(--color-medium-grey);
 }
 
 .dark-text {
-  color: var(--color-dark-grey-text);
+  color: var(--color-dark-grey);
+}
+
+.white-text {
+  color: var(--color-white);
 }
 
 .smalltext {
