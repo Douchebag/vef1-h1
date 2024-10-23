@@ -10,35 +10,34 @@
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 100%;
-  
+
   /* grid items eru miðjuð */
   justify-items: center;
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
-  
+
 }
 
 .forsidu-wrapper {
-  background: linear-gradient(
-    to bottom,
-    var(--color-white) 0%,
-    var(--color-white) 20%,
-    var(--color-grey) 20%,
-    var(--color-grey) 60%,
-    var(--color-white) 60%,
-    var(--color-white) 70%,
-    var(--color-grey) 100%);
+  background: linear-gradient(to bottom,
+  var(--color-white) 0%,
+  var(--color-white) 20%,
+  var(--color-grey) 20%,
+  var(--color-grey) 60%,
+  var(--color-white) 60%,
+  var(--color-white) 70%,
+  var(--color-grey) 100%);
 }
-  
-@media (width >= 800px) {
+
+@media (width >=800px) {
   .wrapper {
     gap: var(--vertical-space-large);
-    
+
   }
+
   .forsidu-wrapper {
-    background: linear-gradient(
-    to bottom,
+    background: linear-gradient(to bottom,
     var(--color-grey) 0%,
     var(--color-grey) 22.5%,
     var(--color-white) 22.5%,
@@ -53,27 +52,27 @@
     var(--color-grey) 100%);
   }
 }
-  
+
 .wrapper .wrapper-content {
   width: var(--width-offset);
   max-width: var(--max-width);
 }
-  
+
 .wrapper .wrapper-nav {
   margin-bottom: var(--spacing);
 }
-  
-@media (width >= 800px) {
+
+@media (width >=800px) {
   .wrapper .wrapper-content {
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
     gap: var(--gutter);
   }
-  
+
   .wrapper .wrapper-nav {
     grid-column: span 0;
   }
-  
+
   .wrapper .wrapper-main {
     grid-column: span 12;
   }

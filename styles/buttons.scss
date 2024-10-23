@@ -7,7 +7,7 @@
   background-position: right bottom;
   transition: all 0.5s ease-out;
   border: 1px solid var(--color-brown);
-} 
+}
 
 .buttons {
   width: 191px;
@@ -24,7 +24,7 @@
 .bigbuttons:hover,
 .buttons:hover {
   background-position: left bottom;
-  color: white;
+  color: var(--color-white);
 }
 
 .buttonlayout {
@@ -40,10 +40,11 @@
   }
 }
 
-@media (width >= 800px) {
+@media (width >=800px) {
   .buttons {
     width: 250px;
   }
+
   .button-border {
     width: 100%;
     display: flex;
@@ -51,21 +52,21 @@
     align-items: center;
     position: relative;
   }
-  
-  .button-border:before,
-  .button-border:after {
+
+  .button-border::before,
+  .button-border::after {
     content: '';
     position: absolute;
     border-bottom: 1px solid var(--color-light-grey);
     top: 70%;
     width: calc(50% - 205px);
   }
-  
-  .button-border:before {
+
+  .button-border::before {
     left: 0;
   }
-  
-  .button-border:after {
+
+  .button-border::after {
     right: 0;
   }
 }

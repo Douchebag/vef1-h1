@@ -61,11 +61,11 @@ html {
   --color-black: #000;
   --color-brown: #e3cdb1;
   --color-grey-text: #d0d0d0;
-  --color-medium-grey:#9B9B9B;
-  --color-dark-grey: #5E5B69;
+  --color-medium-grey: #9b9b9b;
+  --color-dark-grey: #5e5b69;
   --color-cream: #f7f1eb;
   --color-grey: #fafafa;
-  --color-light-grey: #E7E7E7;
+  --color-light-grey: #e7e7e7;
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
   --color-background-secondary: var(--color-cream);
@@ -109,6 +109,10 @@ html {
   text-decoration: none;
   text-align: center;
   font-size: 60px;
+}
+
+.header .menu-btn {
+  display: none;
 }
 
 .header li a:hover,
@@ -171,29 +175,25 @@ html {
 }
 
 /* menu btn */
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
+.menu-btn:checked ~ .menu {
   height: 510px;
   max-height: 570px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::before {
+.menu-btn:checked ~ .menu-icon .navicon::before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::after {
+.menu-btn:checked ~ .menu-icon .navicon::after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after {
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after {
   top: 0;
 }
 
@@ -210,7 +210,7 @@ html {
   .header li a {
     padding: 20px 30px;
     font-size: 20px;
-    border: none;
+    border: 0;
   }
   .header .menu {
     clear: none;
@@ -238,15 +238,23 @@ footer {
   width: 100%;
 }
 
+input {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  border-bottom-color: var(--color-brown);
+}
+
 .efri-footer input {
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
 }
 
 .efri-footer {
-  background-color: black;
-  color: white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +268,6 @@ footer {
   font-size: 12px;
 }
 .efri-footer button {
-  margin-top: 1rem;
   margin-bottom: 2rem;
   color: var(--color-brown);
   padding: 0 2rem;
@@ -275,15 +282,7 @@ footer {
   width: 100%;
 }
 
-input {
-  text-align: left;
-  display: flex;
-  width: 100%;
-  background-color: transparent;
-  border-bottom-color: var(--color-brown);
-}
-
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
   .efri-footer {
     display: flex;
     flex-direction: row;
@@ -294,20 +293,17 @@ input {
   }
   .efri-footer p {
     text-align: left;
+    margin-top: 0;
   }
   .efri-footer button {
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
     color: var(--color-brown);
     box-sizing: content-box;
     padding: 0 2rem;
-    margin-top: 0rem;
+    margin-top: 0;
   }
   .efri-footer h1 {
     margin-bottom: -2rem;
-  }
-  .efri-footer p {
-    margin-top: 0rem;
   }
   .efri-footer label {
     text-align: left;
@@ -337,9 +333,9 @@ main {
 }
 
 /**
-* notum þetta til að fá bil á milli eininga _almennt_
-* en ekki að hver eining þurfi að huga að bili
-*/
+  * notum þetta til að fá bil á milli eininga _almennt_
+  * en ekki að hver eining þurfi að huga að bili
+  */
 main > .content {
   display: flex;
   flex-direction: column;
@@ -389,16 +385,6 @@ main > .content {
   gap: var(--spacing);
 }
 
-.instructions div {
-  display: flex;
-  flex-direction: row;
-  gap: calc(var(--spacing) / 2);
-  align-items: center;
-}
-.instructions div img {
-  max-width: 50px;
-}
-
 .nedra-intro {
   display: flex;
   flex-direction: column;
@@ -416,31 +402,6 @@ main > .content {
 .nedra-intro img {
   width: 205px;
   height: 272px;
-}
-
-.intro-background {
-  background-image: url("../myndir/Background-Header-Image.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0 -20px; /* svo thad ignore-ar width offset */
-  background-position-y: -60px;
-}
-
-.intro-background:has(.intro-video) {
-  background-image: url(../myndir/pink-backg.png);
-  background-size: auto;
-}
-
-.intro-video {
-  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
-  height: 450px;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.hidden-pie {
-  order: 1;
-  display: none;
 }
 
 .intro-2 {
@@ -465,6 +426,51 @@ main > .content {
   color: var(--color-dark-grey-text);
 }
 .intro-2 .desktop-text {
+  display: none;
+}
+
+.imagine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.imagine img {
+  max-height: 200px;
+}
+
+.instructions div {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--spacing) / 2);
+  align-items: center;
+}
+.instructions div img {
+  max-width: 50px;
+}
+
+.intro-background {
+  background-image: url("../myndir/Background-Header-Image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 -20px; /* svo thad ignore-ar width offset */
+  background-position-y: -60px;
+}
+
+.intro-background:has(.intro-video) {
+  background-image: url("../myndir/pink-backg.png");
+  background-size: auto;
+}
+
+.intro-video {
+  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+  height: 450px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hidden-pie {
+  order: 1;
   display: none;
 }
 
@@ -558,6 +564,10 @@ main > .content {
   align-items: center;
 }
 
+.gapmaker > div:first-child {
+  width: 100%;
+}
+
 .twoin1 {
   display: flex;
   flex-direction: row;
@@ -583,18 +593,6 @@ main > .content {
   padding-left: 20px;
 }
 
-.imagine {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  background: transparent;
-  border: none;
-}
-.imagine img {
-  max-height: 200px;
-}
-
 .intro-3 {
   height: auto;
 }
@@ -605,16 +603,13 @@ main > .content {
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .intro-3 .checkmark {
   position: absolute;
   top: 8px;
   left: 3px;
-  border: 2px solid black;
+  border: 2px solid var(--color-black);
   border-radius: 2px;
   height: 18px;
   width: 18px;
@@ -626,26 +621,24 @@ main > .content {
   cursor: pointer;
   height: 0;
   width: 0;
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
 }
-.intro-3 .checkmark:after {
+.intro-3 .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
-.intro-3 .container input:checked ~ .checkmark:after {
-  display: block;
-}
-.intro-3 .container .checkmark:after {
+.intro-3 .container .checkmark::after {
   left: 3px;
   top: -2px;
   width: 8px;
   height: 16px;
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+.intro-3 input:checked ~ .checkmark::after {
+  display: block;
 }
 
 @media (width >= 500px) {
@@ -665,6 +658,24 @@ main > .content {
     position: relative;
     overflow: hidden;
     height: 768px;
+  }
+  .intro-3 {
+    height: 114px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .intro-3 p {
+    font-size: 16px;
+  }
+  .intro-3 h1 {
+    font-size: 60px;
+  }
+  .intro-3 .haegri {
+    align-items: end;
+    padding-right: 4px;
+    padding-top: 5rem;
   }
   .intro div {
     width: 50%;
@@ -699,12 +710,10 @@ main > .content {
     max-height: 626px;
     width: 100%;
     height: 100%;
-    grid-column-end: 12;
-    grid-column-start: 7;
+    grid-column: 7/12;
   }
   .intro-2 div {
-    grid-column-end: 7;
-    grid-column-start: 2;
+    grid-column: 2/7;
     width: 100%;
   }
   .intro-2 div > *:nth-last-child(2) {
@@ -712,24 +721,6 @@ main > .content {
   }
   .intro-2 div h1 {
     text-wrap: nowrap;
-  }
-  .intro-3 {
-    height: 114px;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .intro-3 p {
-    font-size: 16px;
-  }
-  .intro-3 h1 {
-    font-size: 60px;
-  }
-  .intro-3 .haegri {
-    align-items: end;
-    padding-right: 4px;
-    padding-top: 5rem;
   }
   .intro-1 > .hidden-pie {
     display: block;
@@ -767,11 +758,23 @@ main > .content {
     background: transparent;
   }
 }
-@media (min-width: 1000px) {
+@media (width >= 1000px) {
+  .changerow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-left: 135px;
+    gap: 120px;
+  }
+  .changerow h3 {
+    font-size: 30px;
+  }
   .texti-og-cards section {
     width: 100%;
   }
-  .texti-og-cards section p, .texti-og-cards section h3 {
+  .texti-og-cards section p,
+  .texti-og-cards section h3 {
     text-align: left;
   }
   .cards {
@@ -793,7 +796,7 @@ main > .content {
   .instructions {
     display: flex;
     flex-direction: row;
-    padding-left: 0px;
+    padding-left: 0;
   }
   .intro-recipie .a-little-off-the-top {
     margin-left: 135px;
@@ -808,23 +811,8 @@ main > .content {
     display: flex;
     max-width: 550px;
   }
-  .changerow {
-    display: flex;
-    flex-direction: row;
-  }
   .method {
     max-width: 55vw;
-  }
-  .changerow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 50px;
-    margin-left: 135px;
-    gap: 120px;
-  }
-  .changerow h3 {
-    font-size: 30px;
   }
   .ingredients {
     min-width: 250px;
@@ -843,7 +831,7 @@ main > .content {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--color-white);
   height: 290px;
   width: 100%;
 }
@@ -875,22 +863,14 @@ main > .content {
   gap: var(--spacing);
   padding: var(--spacing);
 }
-.card > .content .vinstri p {
-  text-align: left;
-}
 .card > .content .haegri {
   padding: calc(var(--spacing) * 2) var(--spacing) var(--spacing) var(--spacing);
 }
 
-/**
-   * notum nýja selectora! brotið niður
-   * .card            <- veljum öll .card
-   * :not(            <- nema, við viljum ef _ekki_...
-   *   :has(> .image) <- .image sem strangt barn .card
-   * )                <- endir á :not()
-   * > .content       <- sem er strax barn af .card
-   * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
-   */
+.content > .vinstri p {
+  text-align: left;
+}
+
 .card:not(:has(> .image)) > .content {
   border: var(--border-regular);
   border-radius: var(--border-radius-regular);
@@ -917,7 +897,8 @@ main > .content {
     justify-content: center;
     height: 383px;
   }
-  .card > .image img, .card .image {
+  .card > .image img,
+  .card .image {
     height: 290px;
   }
 }
@@ -1000,7 +981,7 @@ main > .content {
 .bigbuttons:hover,
 .buttons:hover {
   background-position: left bottom;
-  color: white;
+  color: var(--color-white);
 }
 
 .buttonlayout {
@@ -1026,18 +1007,18 @@ main > .content {
     align-items: center;
     position: relative;
   }
-  .button-border:before,
-  .button-border:after {
+  .button-border::before,
+  .button-border::after {
     content: "";
     position: absolute;
     border-bottom: 1px solid var(--color-light-grey);
     top: 70%;
     width: calc(50% - 205px);
   }
-  .button-border:before {
+  .button-border::before {
     left: 0;
   }
-  .button-border:after {
+  .button-border::after {
     right: 0;
   }
 }

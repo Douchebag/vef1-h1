@@ -32,6 +32,10 @@
   font-size: 60px;
 }
 
+.header .menu-btn {
+  display: none;
+}
+
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: #f4f4f4;
@@ -95,33 +99,29 @@
 
 /* menu btn */
 
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
+.menu-btn:checked~.menu {
   height: 510px;
   max-height: 570px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.menu-btn:checked~.menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::before {
+.menu-btn:checked~.menu-icon .navicon::before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::after {
+.menu-btn:checked~.menu-icon .navicon::after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after {
+.menu-btn:checked~.menu-icon:not(.steps) .navicon::before,
+.menu-btn:checked~.menu-icon:not(.steps) .navicon::after {
   top: 0;
 }
 
-@media (width >= 800px) {
+@media (width >=800px) {
   .header {
     min-height: auto;
     max-width: var(--max-width);
@@ -131,14 +131,15 @@
 
   .header li {
     float: left;
-    
+
   }
 
   .header li a {
     padding: 20px 30px;
     font-size: 20px;
-    border: none;
+    border: 0;
   }
+
   .header .menu {
     clear: none;
     float: right;

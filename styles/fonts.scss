@@ -4,7 +4,7 @@
 html {
   font-size: var(--font-size-base);
 }
-  
+
 /*** Leturgerðir sem við sækjum úr fonts/ möppu ***/
 @font-face {
   font-family: PlayFair;
@@ -13,7 +13,7 @@ html {
   font-display: swap;
   src: url('fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('woff2');
 }
-  
+
 @font-face {
   font-family: Poppins;
   font-style: normal;
@@ -21,7 +21,7 @@ html {
   font-display: swap;
   src: url('fonts/Poppins/Poppins-Regular.ttf') format('woff2');
 }
-  
+
 /*** Allt meginmál notar open sans ***/
 html,
 input,
@@ -29,7 +29,7 @@ select,
 button {
   font-family: var(--font-family-base);
 }
-  
+
 /*** Allar fyrirsagnir nota Matemasie regular ***/
 h1,
 h2,
@@ -38,12 +38,12 @@ h4,
 legend {
   font-family: var(--font-family-heading);
 }
-  
+
 /** Lætur myndir aldrei taka meira pláss en foreldri skilgreinir **/
 img {
   max-width: 100%;
 }
-  
+
 /** Litur á hlekkjum erfist frá foreldri **/
 a {
   color: inherit;
@@ -68,7 +68,7 @@ a {
 }
 
 .white-text {
-  color: var(--color-white)
+  color: var(--color-white);
 }
 
 .smalltext {

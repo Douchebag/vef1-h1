@@ -1,26 +1,36 @@
 .fb {
-  background-image: url("../myndir/Facebook-Icon.png");
+  background-image: url('../myndir/Facebook-Icon.png');
 }
 
 .tw {
-  background-image: url("../myndir/Twitter-Icon.png");
+  background-image: url('../myndir/Twitter-Icon.png');
 }
 
 .yt {
-  background-image: url("../myndir/Youtube-Icon.png");
+  background-image: url('../myndir/Youtube-Icon.png');
 }
 
 footer {
   width: 100%;
 }
-.efri-footer input {
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
+
+input {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  border-bottom-color: var(--color-brown);
 }
+
+.efri-footer input {
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+}
+
 .efri-footer {
-  background-color: black;
-  color: white;
+  background-color: var(--color-black);
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,15 +43,16 @@ footer {
     color: var(--color-brown);
     font-size: 12px;
   }
+
   button {
-    margin-top: 1rem;
     margin-bottom: 2rem;
     color: var(--color-brown);
     padding: 0 2rem;
     margin-top: 2rem;
-  
+
 
   }
+
   h1 {
     padding-bottom: 2rem;
   }
@@ -52,41 +63,34 @@ footer {
     width: 100%;
   }
 }
-input {
-  text-align: left;
-display: flex;
-  width: 100%;
-  background-color: transparent;
-  border-bottom-color: var(--color-brown);
-}
 
 
-@media (min-width: 1000px) {
+@media (width >=1000px) {
   .efri-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-padding-top: 4rem;
-padding-bottom: 4rem;
-align-items: flex-end;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    align-items: flex-end;
 
     p {
       text-align: left;
+      margin-top: 0;
     }
+
     button {
-      margin-top: 0rem;
-      margin-bottom: 0rem;
+      margin-bottom: 0;
       color: var(--color-brown);
       box-sizing: content-box;
       padding: 0 2rem;
-      margin-top: 0rem;
+      margin-top: 0;
     }
+
     h1 {
       margin-bottom: -2rem;
     }
-    p {
-      margin-top: 0rem;
-    }
+
     label {
       text-align: left;
       width: 100%;
@@ -94,14 +98,17 @@ align-items: flex-end;
 
   }
 }
+
 .nedri-footer {
   display: flex;
   justify-content: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
   p {
     text-align: center;
   }
+
   .socials {
     display: flex;
     justify-content: space-around;
