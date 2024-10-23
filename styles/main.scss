@@ -357,11 +357,6 @@ main>.content {
   .intro-recipie {
     flex-direction: row;
   }
-
-  .intro-recipie img,
-  .intro img {
-    //max-width: var(--max-width-image);
-  }
 }
 
 @media (width >=800px) {
