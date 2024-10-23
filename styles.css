@@ -65,6 +65,7 @@ html {
   --color-dark-grey-text: #5E5B69;
   --color-cream: #f7f1eb;
   --color-grey: #fafafa;
+  --color-light-grey: #E7E7E7;
   /** Litir með notkun **/
   --color-background-primary: var(--color-white);
   --color-background-secondary: var(--color-cream);
@@ -81,7 +82,6 @@ html {
 /* header */
 .header {
   background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -197,11 +197,12 @@ html {
   top: 0;
 }
 
-/* 48em = 768px */
-@media (width >= 48em) {
+@media (width >= 800px) {
   .header {
     min-height: auto;
-    max-width: 100%;
+    max-width: var(--max-width);
+    left: auto;
+    background: var(--color-grey);
   }
   .header li {
     float: left;
@@ -209,11 +210,13 @@ html {
   .header li a {
     padding: 20px 30px;
     font-size: 20px;
+    border: none;
   }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
+    background: var(--color-grey);
   }
   .header .menu-icon {
     display: none;
@@ -287,6 +290,7 @@ input {
     justify-content: space-evenly;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    align-items: flex-end;
   }
   .efri-footer p {
     text-align: left;
@@ -449,6 +453,9 @@ main > .content {
 .intro-2 p {
   color: var(--color-dark-grey-text);
 }
+.intro-2 .desktop-text {
+  display: none;
+}
 
 .intro-text {
   display: none;
@@ -460,11 +467,6 @@ main > .content {
   gap: var(--spacing);
   align-items: center;
   margin: 0 20px;
-}
-.texti-og-cards section p {
-  text-align: center;
-  font-weight: 300;
-  font-size: 12px;
 }
 .texti-og-cards button {
   margin-top: 2rem;
@@ -564,18 +566,62 @@ main > .content {
   gap: calc(0.5 * var(--spacing));
 }
 
-.grad {
-  background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+.intro-3 {
+  height: auto;
+}
+.intro-3 .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.intro-3 .checkmark {
+  position: absolute;
+  top: 8px;
+  left: 3px;
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+}
+.intro-3 .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 1px solid black;
+}
+.intro-3 .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.intro-3 .container input:checked ~ .checkmark:after {
+  display: block;
+}
+.intro-3 .container .checkmark:after {
+  left: 3px;
+  top: -2px;
+  width: 8px;
+  height: 16px;
+  border: 1px solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 @media (width >= 500px) {
-  .intro-recipie,
-  .intro {
+  .intro-recipie {
     flex-direction: row;
-  }
-  .intro-recipie img,
-  .intro img {
-    max-width: var(--max-width-image);
   }
 }
 @media (width >= 800px) {
@@ -585,20 +631,127 @@ main > .content {
   .backround-video,
   .intro-background {
     margin: 0;
+    background: var(--color-grey);
+  }
+  .intro {
+    position: relative;
+    overflow: hidden;
+    height: 768px;
+  }
+  .intro div {
+    width: 50%;
+    display: flex;
+    align-items: baseline;
+    max-width: 552px;
+    padding-left: 2px;
+  }
+  .intro div h1 {
+    font-size: 60px;
+  }
+  .intro div p {
+    font-size: 18px;
+    color: var(--color-dark-grey-text);
+  }
+  .intro-text {
+    display: block;
+  }
+  .intro-2 {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: var(--gutter);
+  }
+  .intro-2 .mobile-text {
+    display: none;
+  }
+  .intro-2 .desktop-text {
+    display: block;
+  }
+  .intro-2 img {
+    max-width: 471px;
+    max-height: 626px;
+    width: 100%;
+    height: 100%;
+    grid-column-end: 12;
+    grid-column-start: 7;
+  }
+  .intro-2 div {
+    grid-column-end: 7;
+    grid-column-start: 2;
+    width: 100%;
+  }
+  .intro-2 div > *:nth-last-child(2) {
+    text-align: left;
+  }
+  .intro-2 div h1 {
+    text-wrap: nowrap;
+  }
+  .intro-3 {
+    height: 114px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .intro-3 p {
+    font-size: 16px;
+  }
+  .intro-3 h1 {
+    font-size: 60px;
+  }
+  .intro-3 .haegri {
+    align-items: end;
+    padding-right: 4px;
+    padding-top: 5rem;
+  }
+  .intro-1 > .hidden-pie {
+    display: block;
+    position: absolute;
+    bottom: -485px;
+    right: -220px;
+    z-index: 1;
+    width: 890px;
+    height: 1336px;
+    max-width: 890px;
+  }
+  .intro-recipie > .hidden-pie {
+    display: block;
+    position: absolute;
+    bottom: -485px;
+    right: -220px;
+    z-index: 1;
+    width: 890px;
+    height: 1336px;
+    max-width: 890px;
+  }
+  .intro-recipie {
+    height: 768px;
+    overflow: hidden;
+    position: relative;
+  }
+  .hvitt-og-brunn-bg {
+    margin: 0;
+    background: transparent;
+  }
+  .hvitt-og-gratt-bg {
+    background: transparent;
   }
 }
-.instructions div {
-  display: flex;
-  flex-direction: row;
-}
-.instructions div img {
-  width: 30px;
-}
-
 @media (min-width: 1000px) {
+  .texti-og-cards section {
+    width: 100%;
+  }
+  .texti-og-cards section p, .texti-og-cards section h3 {
+    text-align: left;
+  }
   .cards {
     grid-template-columns: repeat(calc(var(--columns)), 1fr);
     grid-template-rows: auto;
+  }
+  .cards-1 > *:nth-last-child(-n+3) {
+    display: flex;
+  }
+  .cards-2 > *:nth-last-child(1) {
+    display: flex;
   }
   .intro-text {
     display: block;
@@ -616,6 +769,7 @@ main > .content {
     margin-left: 135px;
     align-items: start;
     margin-top: 120px;
+    z-index: 2;
   }
   .a-little-to-the-right {
     display: none;
@@ -650,6 +804,12 @@ main > .content {
   }
 }
 /** Card **/
+.card p {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 300;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -658,12 +818,6 @@ main > .content {
   width: 100%;
 }
 
-@media (width >= 1000px) {
-  .card {
-    grid-column: span 4;
-    justify-content: center;
-  }
-}
 .card > .image {
   width: 100%;
 }
@@ -722,6 +876,21 @@ main > .content {
   margin-top: var(--spacing);
 }
 
+@media (width >= 800px) {
+  .card > .content {
+    max-height: 93px;
+  }
+}
+@media (width >= 1000px) {
+  .card {
+    grid-column: span 4;
+    justify-content: center;
+    height: 383px;
+  }
+  .card > .image img, .card .image {
+    height: 290px;
+  }
+}
 /**
 * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
 * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
@@ -739,12 +908,18 @@ main > .content {
   gap: var(--vertical-space);
   width: 100%;
   min-height: 100vh;
+}
+
+.forsidu-wrapper {
   background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 20%, var(--color-grey) 20%, var(--color-grey) 60%, var(--color-white) 60%, var(--color-white) 70%, var(--color-grey) 100%);
 }
 
 @media (width >= 800px) {
   .wrapper {
     gap: var(--vertical-space-large);
+  }
+  .forsidu-wrapper {
+    background: linear-gradient(to bottom, var(--color-grey) 0%, var(--color-grey) 22.5%, var(--color-white) 22.5%, var(--color-white) 30.5%, var(--color-grey) 30.5%, var(--color-grey) 51%, var(--color-brown) 51%, var(--color-brown) 69%, var(--color-white) 69%, var(--color-white) 81%, var(--color-grey) 81%, var(--color-grey) 100%);
   }
 }
 .wrapper .wrapper-content {
@@ -766,11 +941,10 @@ main > .content {
     grid-column: span 0;
   }
   .wrapper .wrapper-main {
-    grid-column: span 10;
+    grid-column: span 12;
   }
 }
 .bigbuttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -782,7 +956,6 @@ main > .content {
 }
 
 .buttons {
-  border-radius: 3px;
   width: 191px;
   height: 42px;
   display: block;
@@ -812,6 +985,32 @@ main > .content {
   align-items: center;
 }
 
+@media (width >= 800px) {
+  .buttons {
+    width: 250px;
+  }
+  .button-border {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .button-border:before,
+  .button-border:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--color-light-grey);
+    top: 70%;
+    width: calc(50% - 205px);
+  }
+  .button-border:before {
+    left: 0;
+  }
+  .button-border:after {
+    right: 0;
+  }
+}
 /** Letur og stærðir **/
 /*** Grunnstærð er 16px ***/
 html {
@@ -863,7 +1062,7 @@ a {
 }
 
 .brown-text {
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
 }
 
 .grey-text {
@@ -897,6 +1096,14 @@ a {
   left: 0;
   width: 50%;
   height: 100%;
+  color: var(--color-grey-text);
+}
+
+.card a {
+  color: var(--color-brown);
+}
+
+.card p {
   color: var(--color-grey-text);
 }
 

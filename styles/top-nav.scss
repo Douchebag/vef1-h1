@@ -2,7 +2,7 @@
 
 .header {
   background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 10%);
+  //box-shadow: 1px 1px 4px 0 rgb(0 0 0 / 10%);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -121,12 +121,12 @@
   top: 0;
 }
 
-/* 48em = 768px */
-
-@media (width >= 48em) {
+@media (width >= 800px) {
   .header {
     min-height: auto;
-    max-width: 100%;
+    max-width: var(--max-width);
+    left: auto;
+    background: var(--color-grey);
   }
 
   .header li {
@@ -137,14 +137,18 @@
   .header li a {
     padding: 20px 30px;
     font-size: 20px;
+    border: none;
   }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
+    background: var(--color-grey);
   }
 
   .header .menu-icon {
     display: none;
   }
+
+
 }

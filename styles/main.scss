@@ -62,8 +62,6 @@ main {
     gap:var(--spacing)
   }
   
-
-  
   .nedra-intro {
     display: flex;
     flex-direction: column;
@@ -119,6 +117,9 @@ main {
     p {
       color: var(--color-dark-grey-text);
     }
+    .desktop-text {
+      display: none;
+    }
   }
 
   //falid i mobile view
@@ -132,11 +133,6 @@ main {
     gap: var(--spacing);
     align-items: center;
     margin: 0 20px; // utaf bakgrunn
-    section p {
-      text-align: center;
-      font-weight: 300;
-      font-size: 12px;
-    }
     button {
       margin-top: 2rem;
     }
@@ -169,7 +165,6 @@ main {
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: center;
-
   width: 100%;
 }
 
@@ -191,7 +186,6 @@ main {
   grid-template-rows: auto;
   gap: var(--vertical-space);
   justify-items: center;
-
   width: 100%;
 }
 
@@ -253,14 +247,70 @@ main {
     gap: calc(0.5 * var(--spacing));
   }
 
+  .intro-3 {
+    height: auto;
+    .container {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .checkmark {
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      border: 2px solid black;
+      border-radius: 2px;
+      height: 18px;
+      width: 18px;
+      background-color: transparent;
+    }
+    
+    .container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      border: 1px solid black;
+    }
+    
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .container input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .container .checkmark:after {
+      left: 3px;
+      top: -2px;
+      width: 8px;
+      height: 16px;
+      border: 1px solid black;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
   @media (width >= 500px) {
-    .intro-recipie,
-    .intro {
+    .intro-recipie {
       flex-direction: row;
     }
     .intro-recipie img,
     .intro img {
-      max-width: var(--max-width-image);
+      //max-width: var(--max-width-image);
     }
   }
 
@@ -270,16 +320,141 @@ main {
     }
     .intro-background {
       margin: 0;
+      background: var(--color-grey);
+    }
+    .intro {
+      position: relative;
+      overflow: hidden;
+      height: 768px;
+    }
+    .intro div {
+      width: 50%;
+      display: flex;
+      align-items: baseline;
+      max-width: 552px;
+      padding-left: 2px;
+      h1 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 18px;
+        color: var(--color-dark-grey-text);
+        //text eitthvad laga
+      }
+    }
+    .intro-text {
+      display: block;
+    }
+    .intro-2 {
+      display: grid;
+      grid-template-columns: repeat(var(--columns), 1fr);
+      gap: var(--gutter);
+      .mobile-text {
+        display: none;
+      }
+      .desktop-text {
+        display: block;
+      }
+      img {
+        max-width: 471px;
+        max-height: 626px;
+        width: 100%;
+        height: 100%;
+        //grid-column: span 5;
+        grid-column-end: 12;
+        grid-column-start: 7;
+      }
+      div {
+        //grid-column: span 5;
+        grid-column-end: 7;
+        grid-column-start: 2;
+        width: 100%;
+      }
+      div > *:nth-last-child(2) {
+        text-align: left;
+      }
+      div h1 {
+        text-wrap: nowrap;
+      }
+    }
+    .intro-3 {
+      height: 114px;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 60px;
+      }
+      .haegri {
+        align-items: end;
+        padding-right: 4px;
+        padding-top: 5rem;
+      }
+    }
+
+    .intro-1 > .hidden-pie {
+      display: block;
+      position: absolute;
+      bottom: -485px;
+      right: -220px;
+      z-index: 1;
+      width: 890px;
+      height: 1336px;
+      max-width: 890px;
+    }
+
+    .intro-recipie > .hidden-pie {
+      display: block;
+      position: absolute;
+      bottom: -485px;
+      right: -220px;
+      z-index: 1;
+      width: 890px;
+      height: 1336px;
+      max-width: 890px;
+    }
+
+    .intro-recipie {
+      height: 768px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hvitt-og-brunn-bg {
+      margin: 0;
+      background: transparent;
+    }
+    .hvitt-og-gratt-bg {
+      background: transparent;
     }
   }
 
   @media (min-width: 1000px) {
+    .texti-og-cards section {
+      width: 100%;
+      p, h3 {
+        text-align: left;
+      }
+    }
+
     .cards {
       grid-template-columns: repeat(calc(var(--columns)), 1fr);
       grid-template-rows: auto;
     }
-    // gerir intro text synilegt aftur
+
+    .cards-1 > *:nth-last-child(-n+3) {
+      display: flex;
+    }
     
+    .cards-2 > *:nth-last-child(1) {
+      display: flex;
+    }
+
+    // gerir intro text synilegt aftur
     .intro-text {
       display: block;
     }
@@ -293,11 +468,12 @@ main {
       flex-direction: row;
       padding-left: 0px;
     }
+
     .intro-recipie .a-little-off-the-top {
       margin-left: 135px;
       align-items: start;
       margin-top: 120px;
-    
+      z-index: 2;
     }
     
     .a-little-to-the-right {

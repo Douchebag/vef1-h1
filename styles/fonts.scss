@@ -52,7 +52,7 @@ a {
 }
 
 .brown-text {
-  color: var(--color-brown);
+  color: var(--color-brown) !important;
 }
 
 .grey-text {
@@ -87,5 +87,13 @@ a {
   left: 0;
   width: 50%;
   height: 100%;
+  color: var(--color-grey-text);
+}
+
+.card a {
+  color: var(--color-brown);
+}
+
+.card p {
   color: var(--color-grey-text);
 }
