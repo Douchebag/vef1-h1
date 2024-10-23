@@ -62,16 +62,6 @@ main {
     gap:var(--spacing)
   }
   
-  .instructions div {
-    display: flex;
-    flex-direction: row;
-    gap: calc(var(--spacing)/2);
-    align-items: center;
-    img {
-      max-width: 50px;
-    }
-  }
-  
   .nedra-intro {
     display: flex;
     flex-direction: column;
@@ -101,18 +91,6 @@ main {
     background-position-y: -60px;
   }
   
-  .intro-background:has(.intro-video) {
-    background-image: url(../myndir/pink-backg.png);
-    background-size:auto;
-  }
-
-
-  .intro-video {
-    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 0, 0));
-    height: 450px;
-    flex-direction:row;
-    justify-content: space-around;
-  }
 
   .hidden-pie {
     order: 1;
@@ -247,7 +225,6 @@ main {
     display: flex;
     flex-direction: column;
     gap:calc(2*var(--spacing));
-    align-items: center;
   }
 
   .twoin1 {
@@ -269,23 +246,6 @@ main {
   .method-gap {
     gap: calc(0.5 * var(--spacing));
   }
-
-  .overlapper {
-    white-space: nowrap;
-    padding-left: 20px;
-  }
-
-  .imagine {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    img{
-      max-height: 200px;
-    }
-  }
-
-  
 
   .intro-3 {
     height: auto;
@@ -464,10 +424,6 @@ main {
       position: relative;
     }
 
-    .intro-video {
-      height: 450px;
-    }
-
     .hvitt-og-brunn-bg {
       margin: 0;
       background: transparent;
@@ -511,7 +467,6 @@ main {
       display: flex;
       flex-direction: row;
       padding-left: 0px;
-      
     }
 
     .intro-recipie .a-little-off-the-top {
@@ -558,6 +513,4 @@ main {
     .method-gap {
       flex-direction: column;
     }
-
-    
   }
