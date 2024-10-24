@@ -649,6 +649,9 @@ main > .content {
   .intro-recipie {
     flex-direction: row;
   }
+  .texti-og-cards section {
+    width: 100%;
+  }
 }
 @media (width >= 800px) {
   main {
@@ -773,9 +776,6 @@ main > .content {
   }
   .changerow h3 {
     font-size: 30px;
-  }
-  .texti-og-cards section {
-    width: 100%;
   }
   .texti-og-cards section p,
   .texti-og-cards section h3 {
@@ -906,13 +906,6 @@ main > .content {
     height: 290px;
   }
 }
-/**
-* Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
-* Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
-* sem grunn og án breytinga.
-* Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
-* innan <body>.
-*/
 .wrapper {
   /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
   display: grid;
@@ -1047,7 +1040,7 @@ html {
   font-display: swap;
   src: url("fonts/Poppins/Poppins-Regular.ttf") format("woff2");
 }
-/*** Allt meginmál notar open sans ***/
+/*** Allt meginmál notar Poppins ***/
 html,
 input,
 select,
@@ -1055,7 +1048,7 @@ button {
   font-family: var(--font-family-base);
 }
 
-/*** Allar fyrirsagnir nota Playfair regular ***/
+/*** Allar fyrirsagnir nota PLayfair regular ***/
 h1,
 h2,
 h3,
@@ -1104,7 +1097,6 @@ a {
   display: inline-block;
   position: relative;
   z-index: 1;
-  font-size: 40px;
 }
 
 .split-text::before {
@@ -1125,6 +1117,12 @@ a {
 
 .card p {
   color: var(--color-grey-text);
+}
+
+@media (width >= 500px) {
+  .split-text {
+    font-size: 40px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -80,7 +80,6 @@ a {
   display: inline-block;
   position: relative;
   z-index: 1;
-  font-size: 40px;
 }
 
 .split-text::before {
@@ -101,4 +100,10 @@ a {
 
 .card p {
   color: var(--color-grey-text);
+}
+
+@media (width >=500px) {
+  .split-text {
+    font-size: 40px;
+  }
 }

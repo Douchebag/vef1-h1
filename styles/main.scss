@@ -357,6 +357,9 @@ main>.content {
   .intro-recipie {
     flex-direction: row;
   }
+  .texti-og-cards section {
+    width: 100%;
+  }
 }
 
 @media (width >=800px) {
@@ -513,8 +516,6 @@ main>.content {
   }
 
   .texti-og-cards section {
-    width: 100%;
-
     p,
     h3 {
       text-align: left;
