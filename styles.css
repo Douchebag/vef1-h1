@@ -765,8 +765,8 @@ main > .content {
     background: transparent;
   }
   .intro-video-background {
-    background-size: cover !important;
     background: none;
+    background-size: cover !important;
   }
 }
 @media (width >= 1000px) {

@@ -356,6 +356,7 @@ main>.content {
   .intro-recipie {
     flex-direction: row;
   }
+  
   .texti-og-cards section {
     width: 100%;
   }
@@ -500,8 +501,8 @@ main>.content {
   }
 
   .intro-video-background {
-    background-size: cover !important;
     background: none;
+    background-size: cover !important;
   }
 }
 
