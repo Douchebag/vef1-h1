@@ -329,7 +329,8 @@ input {
 /** Meginmál og efni forsíðu **/
 main {
   width: 100%;
-  padding-top: 4rem; /* fyrir topnav */
+  padding-top: 4rem;
+  /* fyrir topnav */
 }
 
 /**
@@ -453,7 +454,8 @@ main > .content {
   background-image: url("../myndir/Background-Header-Image.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0 -20px; /* svo thad ignore-ar width offset */
+  margin: 0 -20px;
+  /* svo thad ignore-ar width offset */
   background-position-y: -60px;
 }
 
@@ -491,12 +493,14 @@ main > .content {
 
 .hvitt-og-gratt-bg {
   background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-white) 19.6%, var(--color-grey) 19.6%, var(--color-grey) 100%);
-  margin: 0 -20px; /* svo thad ignore-ar width offset */
+  margin: 0 -20px;
+  /* svo thad ignore-ar width offset */
 }
 
 .hvitt-og-brunn-bg {
   background: linear-gradient(to bottom, var(--color-cream) 0%, var(--color-cream) 76%, var(--color-white) 76%, var(--color-white) 100%);
-  margin: 0 -20px; /* svo thad ignore-ar width offset */
+  margin: 0 -20px;
+  /* svo thad ignore-ar width offset */
 }
 
 /** Cards **/
