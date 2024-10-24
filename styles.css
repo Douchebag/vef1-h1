@@ -764,6 +764,10 @@ main > .content {
   .hvitt-og-gratt-bg {
     background: transparent;
   }
+  .intro-video-background {
+    background-size: cover !important;
+    background: none;
+  }
 }
 @media (width >= 1000px) {
   .changerow {

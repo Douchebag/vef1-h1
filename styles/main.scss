@@ -151,7 +151,6 @@ main>.content {
   background-size: auto;
 }
 
-
 .intro-video {
   background-image: linear-gradient(to left, rgb(255 0 0 / 0%), rgb(0 0 0));
   height: 450px;
@@ -498,6 +497,11 @@ main>.content {
 
   .hvitt-og-gratt-bg {
     background: transparent;
+  }
+
+  .intro-video-background {
+    background-size: cover !important;
+    background: none;
   }
 }
 
