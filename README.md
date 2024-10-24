@@ -1,13 +1,3 @@
-## Lýsing á verkefni
-
-`README.md` skrá skal vera í rót verkefnis og innihalda:
-
-- Upplýsingar um hvernig keyra skuli verkefnið
-  - `npm run dev` eða `npm start`
-  - `npm run lint` skal vera til staðar og keyra stylelint á Sass
-- Létt lýsing á uppsetningu verkefnis, hvernig því er skipt í möppur, hvernig CSS/Sass er skipulagt og fleira sem á við
-- Upplýsingar um alla sem unnu verkefni, nöfn, HÍ notendanöfn og GitHub notendanöfn
-
 ## Hvernig skal keyra verkefnið
 - npm run dev
 - npm run lint
