@@ -22,16 +22,38 @@
     - öll class tengd card
   - fonts.scss
     - font-face classar
-    - öll class sem tengjast breytingum á texta
+    - breyttur fyrir lit á letri t.d. brown-text, grey-text o.s.f.
+    - breytur fyrir stærðir t.d. smalltext
+    - split-text
   - footer.scss
-    - öll class tengd footerinum
+    - footer
+    - efri-footer
+    - input
+    - nedri-footer
   - main.scss
-    - allt of margir class-ar
+    - main
+    - intro
+    - intro-1
+    - intro-recipie
+    - instrucions
+    - nedra-intro
+    - intro-2
+    - imagine
+    - intro-background
+    - intro-video
+    - intro-text
+    - texti-og-cards
     - hefði gefst tími til hefðum við skipt main niður í fleirri skjöl
   - reset.scss
     - reset
   - top-nav.scss
-    - öll class sem tengjast top-nav
+    - header
+    - menu
+    - menu-icon
+    - menu-btn
+    - logo
+    - navicon
+  
   - wrapper.scss
     - wrapper
     - wrapper-nav
